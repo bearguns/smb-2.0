@@ -4,7 +4,6 @@ import NavbarMenuBackground from "./NavbarMenuBackground";
 import NavbarMenuLinks from "./NavbarMenuLinks";
 
 const Menu = styled.div`
-  height: 100%;
   margin: 0 auto;
   z-index: 3;
   display: ${props => (props.open ? "flex" : "none")};

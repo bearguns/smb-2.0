@@ -8,6 +8,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     purple: "#c47dff",
     red: "#ff837d",
     blue: "#4AB8BD",
-    lightGray: "#f3f3f3"
+    lightGray: "#f3f3f3",
+    darkGray: "#808080"
   }
 };

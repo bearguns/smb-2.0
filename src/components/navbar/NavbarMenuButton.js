@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const NavBarButton = styled.button`
-  position: absolute;
-  right: 67px;
   height: 64px;
   width: 64px;
   background: transparent;
+  display: flex;
+  flex-direction: column;
   border: none;
   cursor: pointer;
   &:focus {

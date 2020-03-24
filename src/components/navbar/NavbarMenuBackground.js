@@ -8,9 +8,13 @@ const Background = styled.div`
   background: ${props => props.theme.colors.background};
   opacity: 0.75;
   position: absolute;
-  top: 95px;
+  top: 90px;
   left: 0;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 export default function NavbarMenuBackground(props) {
