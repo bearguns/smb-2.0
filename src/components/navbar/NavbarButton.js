@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Heading from "../common/Heading.js";
 
-const NavBarButton = styled.button`
-  height: 64px;
+const Controls = styled.div`
+  display: flex;
+  align-items: flex-end;
+  & h3 {
+    margin-bottom: -4px;
+  }
+`;
+const Button = styled.button`
+  height: 48px;
   width: 64px;
   background: transparent;
   display: flex;
@@ -14,13 +22,13 @@ const NavBarButton = styled.button`
   }
 `;
 
-const MenuLine = styled.div`
+const Line = styled.div`
   position: relative;
   z-index: 2;
   height: 3px;
   width: 100%;
   margin-top: 12px;
-  background-color: ${props => props.theme.colors.pink};
+  background-color: ${props => props.theme.colors.red};
   transition: all 0.2s ease-in-out;
 
   &:nth-of-type(1) {
@@ -46,10 +54,13 @@ const MenuLine = styled.div`
 export default function NavbarMenuButton(props) {
   const { open, handleMenuButtonClick, theme } = props;
   return (
-    <NavBarButton theme={theme} open={open} onClick={handleMenuButtonClick}>
-      <MenuLine open={open} />
-      <MenuLine open={open} />
-      <MenuLine open={open} />
-    </NavBarButton>
+    <Controls>
+      <Heading level={3}>Menu</Heading>
+      <Button theme={theme} open={open} onClick={handleMenuButtonClick}>
+        <Line open={open} />
+        <Line open={open} />
+        <Line open={open} />
+      </Button>
+    </Controls>
   );
 }

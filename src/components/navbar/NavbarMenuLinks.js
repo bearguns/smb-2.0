@@ -1,19 +1,33 @@
 import React from "react";
 import styled from "styled-components";
+import ThemeToggle from "../ThemeToggle.js";
+import Heading from "../common/Heading.js";
 
-const MenuLink = styled.a`
+const MenuLinks = styled.ul`
+  opacity: ${props => (props.open ? 1 : 0)};
+  transition: opacity 0.5s;
+`;
+
+const MenuLink = styled.li`
   text-decoration: underline;
-  color: ${props => props.theme.colors.teal};
+  list-style: none;
+  color: ${props => props.theme.colors.red};
   text-align: center;
 `;
 
 export default function NavbarMenuLinks(props) {
   const { open, theme } = props;
   return (
-    <div>
+    <MenuLinks open={open}>
       <MenuLink theme={theme}>Home</MenuLink>
       <MenuLink theme={theme}>About</MenuLink>
       <MenuLink theme={theme}>Portfolio</MenuLink>
-    </div>
+      <MenuLink>
+        <Heading level={2} color={"lightGray"}>
+          Use dark theme:
+        </Heading>
+        <ThemeToggle />
+      </MenuLink>
+    </MenuLinks>
   );
 }

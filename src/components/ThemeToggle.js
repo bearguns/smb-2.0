@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { Context } from "./Store.js";
+import lightTheme from "../themes/light.js";
+import darkTheme from "../themes/dark.js";
 
 const Toggle = styled.div`
   position: relative;
+  left: 32.5%;
 `;
 
 const Label = styled.label`
@@ -36,7 +40,7 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })`
   height: 40px;
   visibility: hidden;
   &:checked + ${Label} {
-    background-color: ${props => props.theme.colors.teal};
+    background-color: ${props => props.theme.colors.green};
     &::after {
       content: "";
       margin-left: 60px;
@@ -46,8 +50,18 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })`
 `;
 
 export default function ThemeToggle(props) {
-  const { theme, toggleTheme, activeThemeName } = props;
-  console.log(activeThemeName);
+  const { theme } = props;
+  const [state, dispatch] = useContext(Context);
+  const { activeThemeName } = state;
+  const toggleTheme = () => {
+    if (activeThemeName === "light") {
+      dispatch({ type: "SET_ACTIVE_THEME_NAME", payload: "dark" });
+      return dispatch({ type: "SET_ACTIVE_THEME", payload: darkTheme });
+    }
+    dispatch({ type: "SET_ACTIVE_THEME_NAME", payload: "light" });
+    return dispatch({ type: "SET_ACTIVE_THEME", payload: lightTheme });
+  };
+
   return (
     <Toggle theme={theme}>
       <Checkbox
