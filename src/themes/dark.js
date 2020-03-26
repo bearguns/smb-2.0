@@ -4,11 +4,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   colors: {
     black: "#000000",
     pattern: "#000000",
-    background: "#f3f3f3",
+    background: "#f5f5f5",
     green: "limegreen",
     red: "#bd2420",
     white: "#f5f5f5",
-    lightGray: "#f3f3f3",
+    lightGray: "#f5f5f5",
     darkGray: "#808080",
     menuBackground: "#000000"
   }

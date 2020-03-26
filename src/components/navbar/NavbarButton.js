@@ -7,6 +7,9 @@ const Controls = styled.div`
   align-items: flex-end;
   & h3 {
     margin-bottom: -4px;
+    @media screen and (max-width: 812px) {
+      display: none;
+    }
   }
 `;
 const Button = styled.button`
@@ -45,8 +48,8 @@ const Line = styled.div`
   &:nth-of-type(3) {
     transform: ${props =>
       props.open
-        ? "rotate(-45deg) translateY(-12px) translateX(12px)"
-        : "none"};
+	? "rotate(-45deg) translateY(-12px) translateX(12px)"
+	: "none"};
     z-index: 3;
   }
 `;
@@ -57,9 +60,9 @@ export default function NavbarMenuButton(props) {
     <Controls>
       <Heading level={3}>Menu</Heading>
       <Button theme={theme} open={open} onClick={handleMenuButtonClick}>
-        <Line open={open} />
-        <Line open={open} />
-        <Line open={open} />
+	<Line open={open} />
+	<Line open={open} />
+	<Line open={open} />
       </Button>
     </Controls>
   );

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Store from "./Store.js";
 import Navbar from "./navbar/Navbar.js";
 import AppWrapper from "./AppWrapper.js";
-import Page from "./common/Page.js";
+import Home from "./pages/Home.js";
 function App() {
   return (
     <Store>
@@ -13,9 +13,7 @@ function App() {
 	<Router>
 	  <Switch>
 	    <Route path="/">
-	      <Page>
-		<h1>Home Page</h1>
-	      </Page>
+	      <Home />
 	    </Route>
 	  </Switch>
 	</Router>

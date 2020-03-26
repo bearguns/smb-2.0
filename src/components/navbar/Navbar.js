@@ -10,10 +10,18 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   height: 90px;
+  z-index: 9;
   background-color: #000000;
   border-bottom: 2px solid;
   border-bottom-color: ${props => props.theme.colors.red};
   padding: 15px 27px;
+  @media screen and (max-width: 812px) {
+    padding: 5px 9px;
+
+    & h1 {
+      font-size: 1.25rem;
+    }
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;

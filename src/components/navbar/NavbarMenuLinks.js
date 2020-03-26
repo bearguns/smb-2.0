@@ -6,6 +6,8 @@ import Heading from "../common/Heading.js";
 const MenuLinks = styled.ul`
   opacity: ${props => (props.open ? 1 : 0)};
   transition: opacity 0.5s;
+  width: 80%;
+  padding: 0px;
 `;
 
 const MenuLink = styled.li`
@@ -23,10 +25,10 @@ export default function NavbarMenuLinks(props) {
       <MenuLink theme={theme}>About</MenuLink>
       <MenuLink theme={theme}>Portfolio</MenuLink>
       <MenuLink>
-        <Heading level={2} color={"lightGray"}>
-          Use dark theme:
-        </Heading>
-        <ThemeToggle />
+	<Heading level={2} color={"lightGray"}>
+	  Use dark theme:
+	</Heading>
+	<ThemeToggle />
       </MenuLink>
     </MenuLinks>
   );
