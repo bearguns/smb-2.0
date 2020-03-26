@@ -17,6 +17,7 @@ const View = styled.section`
 
   @media screen and (max-width: 812px) {
     grid-template-columns: repeat(2, 1fr);
+    padding-top: 90px;
   }
 `;
 

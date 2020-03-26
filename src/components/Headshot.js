@@ -6,7 +6,7 @@ const Image = styled.img`
   clip-path: circle(132px at center);
   margin: 0 auto;
   @media screen and (max-width: 768px) {
-    clip-path: circle(44px at center);
+    clip-path: circle(120px at center);
   }
   @media screen and (min-width: 768px) {
     clip-path: circle(118px at center);

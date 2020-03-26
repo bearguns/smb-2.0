@@ -6,13 +6,14 @@ const Controls = styled.div`
   display: flex;
   align-items: flex-end;
   & h3 {
-    margin-bottom: -4px;
+    margin-bottom: -8px;
     @media screen and (max-width: 812px) {
       display: none;
     }
   }
 `;
 const Button = styled.button`
+  position: relative;
   height: 48px;
   width: 64px;
   background: transparent;
@@ -26,10 +27,10 @@ const Button = styled.button`
 `;
 
 const Line = styled.div`
-  position: relative;
+  position: absolute;
   z-index: 2;
   height: 3px;
-  width: 100%;
+  width: 90%;
   margin-top: 12px;
   background-color: ${props => props.theme.colors.red};
   transition: all 0.2s ease-in-out;
@@ -43,6 +44,7 @@ const Line = styled.div`
   &:nth-of-type(2) {
     opacity: ${props => (props.open ? 0 : 1)};
     z-index: 0;
+    margin-top: 26px;
   }
 
   &:nth-of-type(3) {
@@ -51,6 +53,7 @@ const Line = styled.div`
 	? "rotate(-45deg) translateY(-12px) translateX(12px)"
 	: "none"};
     z-index: 3;
+    margin-top: 42px;
   }
 `;
 

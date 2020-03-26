@@ -15,11 +15,12 @@ const Wrapper = styled.div`
 const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
-height: 100vh;
+  height: 100%;
 }
 
 body {
   margin: 0;
+  min-height: 100%;
 }
 
 *,
@@ -29,7 +30,10 @@ body {
 }
 
 #root {
- height: 100%;
+  height: 100vh;
+  @media screen and (max-width: 812px) {
+    height: 100%;
+  }
  }
 `;
 
