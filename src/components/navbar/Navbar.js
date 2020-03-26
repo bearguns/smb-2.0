@@ -11,6 +11,8 @@ const Nav = styled.nav`
   left: 0;
   height: 90px;
   background-color: #000000;
+  border-bottom: 2px solid;
+  border-bottom-color: ${props => props.theme.colors.red};
   padding: 15px 27px;
   display: flex;
   justify-content: space-between;
@@ -27,7 +29,7 @@ export default function Navbar(props) {
   return (
     <Nav>
       <Heading level={1} color="lightGray">
-        I'm Sean Brage
+	I'm Sean Brage
       </Heading>
       <NavbarButton open={menuOpen} handleMenuButtonClick={toggleMenu} />
       <NavbarMenu open={menuOpen} />

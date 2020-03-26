@@ -20,7 +20,7 @@ const Menu = styled.div`
 
   &:after {
     content: "";
-    background-color: ${props => props.theme.colors.background};
+    background-color: ${props => props.theme.colors.menuBackground};
     opacity: 0.55;
     position: absolute;
     top: 0;

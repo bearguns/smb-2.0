@@ -3,12 +3,13 @@ import { Context } from "./Store.js";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.colors.background};
   background: ${props => props.theme.background};
+  background-color: ${props => props.theme.colors.pattern};
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
   transition: background-color 0.25s ease-in-out;
   width: 100%;
+  padding-top: 90px;
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -27,6 +28,10 @@ body {
 *:after {
   box-sizing: inherit;
 }
+
+#root {
+  height: 100%;
+}
 `;
 
 export default function AppWrapper(props) {
@@ -38,7 +43,7 @@ export default function AppWrapper(props) {
     <React.Fragment>
       <GlobalStyle />
       <ThemeProvider theme={activeTheme}>
-        <Wrapper>{children}</Wrapper>
+	<Wrapper>{children}</Wrapper>
       </ThemeProvider>
     </React.Fragment>
   );

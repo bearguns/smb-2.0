@@ -4,3 +4,7 @@ charset=utf-8
 [*.js]
 indent_style=spaces
 indent_size=2
+
+[*.css]
+indent_style=spaces
+indent_size=2
