@@ -3,6 +3,39 @@ import ReactDOM from "react-dom";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faTerminal,
+  faCompass,
+  faLaptopCode
+} from "@fortawesome/pro-light-svg-icons";
+import {
+  faGithub,
+  faJsSquare,
+  faVuejs,
+  faReact,
+  faCss3Alt,
+  faHtml5,
+  faSass,
+  faPython,
+  faUbuntu
+} from "@fortawesome/free-brands-svg-icons";
+
+library.add(
+  faCompass,
+  faGithub,
+  faTerminal,
+  faJsSquare,
+  faVuejs,
+  faReact,
+  faCss3Alt,
+  faHtml5,
+  faSass,
+  faPython,
+  faUbuntu,
+  faLaptopCode
+);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

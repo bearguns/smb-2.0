@@ -13,10 +13,9 @@ const Wrapper = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Fira+Sans:wght@300;700&display=swap');
-
 html {
   box-sizing: border-box;
+height: 100vh;
 }
 
 body {
@@ -30,8 +29,8 @@ body {
 }
 
 #root {
-  height: 100%;
-}
+ height: 100%;
+ }
 `;
 
 export default function AppWrapper(props) {

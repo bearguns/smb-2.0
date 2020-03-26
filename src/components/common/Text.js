@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Context } from "../Store.js";
 const Paragraph = styled.p`
-  padding: 4px;
   color: ${props =>
     props.themeName === "light"
       ? props.theme.colors.lightGray

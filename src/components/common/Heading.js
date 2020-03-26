@@ -13,7 +13,7 @@ const H1 = styled.h1`
     props.color ? props.theme.colors[props.color] : props.theme.colors.red};
   text-transform: uppercase;
   font-family: ${fontFamily};
-  font-weight: ${fontWeightBold};
+  font-weight: ${fontWeightRegular};
   font-size: 2.25rem;
 `;
 
@@ -42,11 +42,11 @@ const H4 = styled.h4`
   margin: 0px;
   color: ${props =>
     props.themeName === "dark"
-      ? props.theme.colors.lightGray
-      : props.theme.colors.black};
+      ? props.theme.colors.black
+      : props.theme.colors.lightGray};
   text-transform: uppercase;
   font-family: ${fontFamily};
-  font-weight: ${fontWeightRegular};
+  font-weight: ${fontWeightBold};
   font-size: 1.5rem;
 `;
 
@@ -72,7 +72,7 @@ const H6 = styled.h6`
 `;
 
 export default function Heading(props) {
-  const { level, children, color } = props;
+  const { level, children, color = "" } = props;
   const [state] = useContext(Context);
   const { activeTheme, activeThemeName } = state;
   const components = {

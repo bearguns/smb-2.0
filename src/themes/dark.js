@@ -11,5 +11,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     lightGray: "#f5f5f5",
     darkGray: "#808080",
     menuBackground: "#000000"
-  }
+  },
+  name: "dark"
 };

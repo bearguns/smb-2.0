@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Heading from "../common/Heading.js";
 import Text from "../common/Text.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Wrapper = styled.section`
   background-color: ${props => props.theme.colors.background};
   grid-column: 1 / 4;
   padding: 27px;
-  @media screen and (max-width: 812px) {
+  @media screen and (max-width: 1024px) {
     grid-column: 1 / -1;
     padding: 15px;
   }
@@ -17,7 +18,10 @@ export default function AboutBanner(props) {
   const { theme } = props;
   return (
     <Wrapper>
-      <Heading level={1}>About Me</Heading>
+      <Heading level={1}>
+	<FontAwesomeIcon icon={["fal", "compass"]} />
+      </Heading>
+      <Heading level={2}>About Me</Heading>
       <Text>
 	From production single-page-apps for a major phone service provider, to
 	progressive VueJS enhancements in legacy Jinja templates; I've been

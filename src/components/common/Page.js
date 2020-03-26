@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const View = styled.section`
-  margin: 27px auto;
+  margin: 0px auto;
   display: grid;
+  height: 100%;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 428px);
+  grid-template-rows: repeat(3, 428px);
   grid-column-gap: 12px;
-  grid-row-gap: 128px;
-
+  grid-row-gap: 96px;
+  padding-bottom: 27px;
   @media screen and (max-width: 1157px) {
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 100px;
