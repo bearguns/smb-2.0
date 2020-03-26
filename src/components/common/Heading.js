@@ -1,8 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import darkTheme from "../../themes/dark.js";
-import lightTheme from "../../themes/light.js";
-import { Context } from "../Store.js";
 const fontFamily = `"Fira Code", monospace;`;
 const fontWeightBold = 600;
 const fontWeightRegular = 400;
@@ -19,10 +16,7 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
   margin: 0px;
-  color: ${props =>
-    props.themeName === "dark"
-      ? props.theme.colors.black
-      : props.theme.colors.lightGray};
+  color: ${props => props.theme.colors.lightGray};
   text-transform: uppercase;
   font-family: ${fontFamily};
   font-weight: ${fontWeightRegular};
@@ -40,10 +34,7 @@ const H3 = styled.h3`
 
 const H4 = styled.h4`
   margin: 0px;
-  color: ${props =>
-    props.themeName === "dark"
-      ? props.theme.colors.black
-      : props.theme.colors.lightGray};
+  color: ${props => props.theme.colors.lightGray};
   text-transform: uppercase;
   font-family: ${fontFamily};
   font-weight: ${fontWeightBold};
@@ -52,10 +43,7 @@ const H4 = styled.h4`
 
 const H5 = styled.h5`
   margin: 0px;
-  color: ${props =>
-    props.themeName === "dark"
-      ? props.theme.colors.lightGray
-      : props.theme.colors.black};
+  color: ${props => props.theme.colors.lightGray};
   text-transform: uppercase;
   font-family: ${fontFamily};
   font-weight: ${fontWeightRegular};
@@ -72,9 +60,7 @@ const H6 = styled.h6`
 `;
 
 export default function Heading(props) {
-  const { level, children, color = "" } = props;
-  const [state] = useContext(Context);
-  const { activeTheme, activeThemeName } = state;
+  const { level, children, color = "", theme } = props;
   const components = {
     1: H1,
     2: H2,
@@ -85,7 +71,7 @@ export default function Heading(props) {
   };
   const TagName = components[level];
   return (
-    <TagName theme={activeTheme} themeName={activeThemeName} color={color}>
+    <TagName theme={theme} color={color}>
       {children}
     </TagName>
   );

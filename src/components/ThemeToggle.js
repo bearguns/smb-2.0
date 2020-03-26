@@ -6,7 +6,7 @@ import darkTheme from "../themes/dark.js";
 
 const Toggle = styled.div`
   position: relative;
-  left: 32.5%;
+  left: 25%;
 `;
 
 const Label = styled.label`
@@ -65,9 +65,9 @@ export default function ThemeToggle(props) {
   return (
     <Toggle theme={theme}>
       <Checkbox
-        theme={theme}
-        checked={activeThemeName === "dark" ? "checked" : ""}
-        readOnly
+	theme={theme}
+	checked={activeThemeName === "dark" ? "checked" : ""}
+	readOnly
       ></Checkbox>
       <Label theme={theme} onClick={toggleTheme}></Label>
     </Toggle>

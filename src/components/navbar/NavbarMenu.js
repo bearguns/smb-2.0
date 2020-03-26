@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import NavbarMenuLinks from "./NavbarMenuLinks";
-import ThemeToggle from "../ThemeToggle.js";
 
 const Menu = styled.div`
   margin: 0 auto;
@@ -31,11 +30,11 @@ const Menu = styled.div`
 `;
 
 export default function NavbarMenu(props) {
-  const { theme, open } = props;
+  const { open, handleLinkClick } = props;
 
   return (
     <Menu open={open}>
-      <NavbarMenuLinks open={open} />
+      <NavbarMenuLinks open={open} handleLinkClick={handleLinkClick} />
     </Menu>
   );
 }

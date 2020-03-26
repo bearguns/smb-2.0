@@ -2,10 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Context } from "../Store.js";
 const Paragraph = styled.p`
-  color: ${props =>
-    props.themeName === "light"
-      ? props.theme.colors.lightGray
-      : props.theme.colors.black};
+  color: ${props => props.theme.colors.lightGray};
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 1rem;

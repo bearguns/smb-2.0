@@ -5,7 +5,7 @@ import Text from "../common/Text.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Wrapper = styled.section`
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${props => props.theme.colors.black};
   grid-column: 1 / 4;
   padding: 27px;
   @media screen and (max-width: 1024px) {
@@ -14,8 +14,7 @@ const Wrapper = styled.section`
   }
 `;
 
-export default function AboutBanner(props) {
-  const { theme } = props;
+export default function AboutBanner() {
   return (
     <Wrapper>
       <Heading level={1}>

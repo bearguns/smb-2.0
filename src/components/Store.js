@@ -1,18 +1,17 @@
 import React, { createContext, useReducer } from "react";
-import dark from "../themes/dark.js";
 import light from "../themes/light.js";
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "SET_ACTIVE_THEME_NAME":
       return {
-        ...state,
-        activeThemeName: action.payload
+	...state,
+	activeThemeName: action.payload
       };
     case "SET_ACTIVE_THEME":
       return {
-        ...state,
-        activeTheme: { ...action.payload }
+	...state,
+	activeTheme: { ...action.payload }
       };
     default:
       return state;

@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   padding: 15px;
-  & ${Heading} {
+  & h3 {
     text-align: center;
   }
 `;

@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Heading from "../common/Heading.js";
 import Text from "../common/Text.js";
 import WorkIcons from "./WorkIcons.js";
+
 const Wrapper = styled.section`
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${props => props.theme.colors.black};
   grid-column: 4 / 7;
   padding: 27px;
   @media screen and (max-width: 1024px) {
@@ -14,8 +15,7 @@ const Wrapper = styled.section`
   }
 `;
 
-export default function WorkBanner(props) {
-  const { theme } = props;
+export default function WorkBanner() {
   return (
     <Wrapper>
       <Heading level={1}>

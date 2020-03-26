@@ -2,10 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Heading from "../common/Heading.js";
-import Text from "../common/Text.js";
 
 const Wrapper = styled.section`
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${props => props.theme.colors.black};
   grid-column: 1 / -1;
   padding: 27px;
   @media screen and (max-width: 812px) {
@@ -23,10 +22,7 @@ const ListWrapper = styled.div`
 const ListItem = styled.li`
   list-style: square;
   font-size: 1.5rem;
-  color: ${props =>
-    props.theme.name === "dark"
-      ? props.theme.colors.black
-      : props.theme.colors.lightGray};
+  color: ${props => props.theme.colors.lightGray};
   font-family: "Fira Code", sans-serif;
   font-weight: 400;
   margin-left: 57px;
@@ -52,8 +48,7 @@ const List = styled.ul`
   }
 `;
 
-export default function BuiltWithBanner(props) {
-  const { theme } = props;
+export default function BuiltWithBanner() {
   const techStack = [
     "react",
     "styled-components",

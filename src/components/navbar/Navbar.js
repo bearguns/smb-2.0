@@ -27,8 +27,7 @@ const Nav = styled.nav`
   align-items: center;
 `;
 
-export default function Navbar(props) {
-  const { activeThemeName } = props;
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     return setMenuOpen(!menuOpen);
@@ -40,7 +39,7 @@ export default function Navbar(props) {
 	I'm Sean Brage
       </Heading>
       <NavbarButton open={menuOpen} handleMenuButtonClick={toggleMenu} />
-      <NavbarMenu open={menuOpen} />
+      <NavbarMenu open={menuOpen} handleLinkClick={toggleMenu} />
     </Nav>
   );
 }

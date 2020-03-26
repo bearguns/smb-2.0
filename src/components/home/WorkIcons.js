@@ -17,8 +17,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function WorkIcons(props) {
-  const { theme } = props;
+export default function WorkIcons() {
   const icons = [
     ["fab", "js-square"],
     ["fab", "vuejs"],
