@@ -15,6 +15,12 @@ const Wrapper = styled.div`
   & svg:not(:first-child) {
     margin-left: 22px;
   }
+
+  @media screen and (max-width: 812px) {
+    & svg:not(:first-child) {
+      margin-left: 11px;
+    }
+  }
 `;
 
 export default function WorkIcons() {

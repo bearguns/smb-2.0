@@ -1,28 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import Block from "../layout/Block.js";
 import Heading from "../common/Heading.js";
 import Text from "../common/Text.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import slideInFromLeft from "../../animations/slide-in-from-left.js";
-
-const Wrapper = styled.section`
-  transform: translateX(-100%);
-  animation: ${slideInFromLeft} 0.15s ease-in-out 0.75s 1;
-  animation-fill-mode: forwards;
-  background-color: ${props => props.theme.colors.black};
-  grid-column: 1 / 4;
-  grid-row: span 3;
-  padding: 27px;
-  @media screen and (max-width: 1024px) {
-    grid-column: 1 / -1;
-    grid-row: span 3;
-    padding: 15px;
-  }
-`;
 
 export default function AboutBanner() {
   return (
-    <Wrapper>
+    <Block appear={"left"} columns={"left"} delay=".75s" rows={3}>
       <Heading level={1}>
 	<FontAwesomeIcon icon={["fal", "compass"]} />
       </Heading>
@@ -38,6 +22,6 @@ export default function AboutBanner() {
 	server for fun and profit. Above all, I like solving problems and
 	building cool $*!%.
       </Text>
-    </Wrapper>
+    </Block>
   );
 }
