@@ -2,14 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Heading from "../common/Heading.js";
-
+import slideInFromBottom from "../../animations/slide-in-from-bottom.js";
 const Wrapper = styled.section`
+  transform: translateX(-100%);
+  animation: ${slideInFromBottom} 0.5s ease-in-out 0.75s 1;
+  animation-fill-mode: forwards;
   background-color: ${props => props.theme.colors.black};
   grid-column: 1 / -1;
+  grid-row: span 3;
   padding: 27px;
   @media screen and (max-width: 812px) {
     padding: 15px;
-    grid-rows: auto;
+    grid-row: span 3;
   }
   margin-bottom: 15px;
 `;
@@ -31,7 +35,7 @@ const ListItem = styled.li`
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 `;
 const List = styled.ul`

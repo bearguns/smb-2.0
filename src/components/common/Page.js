@@ -6,9 +6,9 @@ const View = styled.section`
   display: grid;
   height: 100%;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 428px);
+  grid-template-rows: repeat(12, 100px);
   grid-column-gap: 12px;
-  grid-row-gap: 96px;
+  grid-row-gap: 64px;
   padding-bottom: 27px;
   @media screen and (max-width: 1157px) {
     grid-template-columns: repeat(4, 1fr);
@@ -17,7 +17,6 @@ const View = styled.section`
 
   @media screen and (max-width: 812px) {
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 90px;
   }
 `;
 

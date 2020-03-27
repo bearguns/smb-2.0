@@ -4,13 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Heading from "../common/Heading.js";
 import Text from "../common/Text.js";
 import WorkIcons from "./WorkIcons.js";
+import slideInFromRight from "../../animations/slide-in-from-right.js";
 
 const Wrapper = styled.section`
+  transform: translateX(100%);
+  animation: ${slideInFromRight} 0.15s ease-in-out 0.75s 1;
+  animation-fill-mode: forwards;
   background-color: ${props => props.theme.colors.black};
   grid-column: 4 / 7;
-  padding: 27px;
+  grid-row: span 3;
+  padding: 15px 27px;
   @media screen and (max-width: 1024px) {
     grid-column: 1 / -1;
+    grid-row: span 3;
     padding: 15px;
   }
 `;

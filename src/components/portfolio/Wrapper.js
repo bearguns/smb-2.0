@@ -12,10 +12,12 @@ const Wrapper = styled.section`
 `;
 
 export default function ContentWrapper(props) {
-  const { column } = props;
-  const columnSpan = {
+  const { columnSpan, children } = props;
+  const columns = {
     left: "1 / 4",
     right: "4 / 7",
-    full: "1 / 1"
-  }[columns];
+    full: "1 / -1"
+  }[columnSpan];
+
+  return <Wrapper columnSpan={columns}>{children}</Wrapper>;
 }

@@ -3,8 +3,11 @@ import styled from "styled-components";
 import NavbarButton from "./NavbarButton";
 import NavbarMenu from "./NavbarMenu";
 import Heading from "../common/Heading.js";
+import slideInFromTop from "../../animations/slide-in-from-top.js";
 
 const Nav = styled.nav`
+  animation: ${slideInFromTop} 0.25s linear 0s 1;
+  animation-fill-mode: forwards;
   position: fixed;
   width: 100%;
   top: 0;

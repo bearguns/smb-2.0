@@ -1,9 +1,16 @@
 import React, { useContext } from "react";
 import { Context } from "./Store.js";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import fadeIn from "../animations/fade-in.js";
 
 const Wrapper = styled.div`
-  padding-top: 90px;
+  padding-top: 164px;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  @media screen and (max-width: 812px) {
+    padding-top: 90px;
+  }
 `;
 
 const Background = styled.div`
@@ -18,6 +25,8 @@ const Background = styled.div`
   height: 100%;
   transition: background-color 0.25s ease-in-out;
   width: 100%;
+  animation: ${fadeIn} 0.5s linear 0s 1;
+  animation-fill-mode: forwards;
 `;
 
 const GlobalStyle = createGlobalStyle`

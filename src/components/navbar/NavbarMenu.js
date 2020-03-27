@@ -4,10 +4,10 @@ import NavbarMenuLinks from "./NavbarMenuLinks";
 
 const Menu = styled.div`
   margin: 0 auto;
-  position: fixed;
+  position: absolute;
   top: 90px;
   left: 0;
-  height: ${props => (props.open ? "100%" : "0px")};
+  height: ${props => (props.open ? "100vh" : "0px")};
   width: 100%;
   z-index: 0;
   display: flex;
