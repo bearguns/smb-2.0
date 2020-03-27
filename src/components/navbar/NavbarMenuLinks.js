@@ -32,11 +32,11 @@ const ToggleWrapper = styled.div`
 
 export default function NavbarMenuLinks(props) {
   const { open, handleLinkClick } = props;
-  console.log(handleLinkClick);
   const links = [
     { to: "/", text: "home" },
     { to: "/examples", text: "my work" }
   ];
+
   return (
     <MenuLinks open={open}>
       {links.map(link => (

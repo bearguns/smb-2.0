@@ -1,5 +1,5 @@
 import React from "react";
-import Page from "../common/Page.js";
+import Page from "../layout/Page.js";
 import Headshot from "../Headshot.js";
 import AboutBanner from "../home/AboutBanner.js";
 import WorkBanner from "../home/WorkBanner.js";

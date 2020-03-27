@@ -7,7 +7,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faTerminal,
   faCompass,
-  faLaptopCode
+  faLaptopCode,
+  faBrowser
 } from "@fortawesome/pro-light-svg-icons";
 import {
   faGithub,
@@ -33,7 +34,8 @@ library.add(
   faSass,
   faPython,
   faUbuntu,
-  faLaptopCode
+  faLaptopCode,
+  faBrowser
 );
 
 ReactDOM.render(

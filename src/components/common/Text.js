@@ -5,7 +5,7 @@ const Paragraph = styled.p`
   color: ${props => props.theme.colors.lightGray};
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.15rem;
 `;
 
 export default function Text(props) {
