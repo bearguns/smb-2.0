@@ -5,7 +5,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     pattern: "#f5f5f5",
     background: "#000000",
     white: "#f5f5f5",
-    black: "#000000",
+    black: "#282424",
     green: "limegreen",
     red: "#bd2420",
     lightGray: "#f3f3f3",
