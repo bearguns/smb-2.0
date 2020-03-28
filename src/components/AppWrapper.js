@@ -21,7 +21,7 @@ const Background = styled.div`
   right: 0;
   bottom: 0;
   background: ${props => props.theme.background};
-  background-color: ${props => props.theme.colors.pattern};
+  background-color: ${props => props.theme.colors.background};
   height: 100%;
   transition: background-color 0.25s ease-in-out;
   width: 100%;
