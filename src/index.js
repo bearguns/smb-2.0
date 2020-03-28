@@ -8,7 +8,9 @@ import {
   faTerminal,
   faCompass,
   faLaptopCode,
-  faBrowser
+  faBrowser,
+  faEnvelope,
+  faPhone
 } from "@fortawesome/pro-light-svg-icons";
 import {
   faGithub,
@@ -19,7 +21,8 @@ import {
   faHtml5,
   faSass,
   faPython,
-  faUbuntu
+  faUbuntu,
+  faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
@@ -35,7 +38,10 @@ library.add(
   faPython,
   faUbuntu,
   faLaptopCode,
-  faBrowser
+  faBrowser,
+  faEnvelope,
+  faPhone,
+  faLinkedin
 );
 
 ReactDOM.render(

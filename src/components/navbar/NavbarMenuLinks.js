@@ -8,9 +8,12 @@ const MenuLinks = styled.ul`
   opacity: ${props => (props.open ? 1 : 0)};
   transition: opacity 0.5s;
   width: 80%;
-  height: 40%;
+  height: 20%;
   padding: 0px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const MenuLink = styled.li`
@@ -34,7 +37,8 @@ export default function NavbarMenuLinks(props) {
   const { open, handleLinkClick } = props;
   const links = [
     { to: "/", text: "home" },
-    { to: "/examples", text: "my work" }
+    { to: "/examples", text: "portfolio" },
+    { to: "/contact", text: "contact" }
   ];
 
   return (

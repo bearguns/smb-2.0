@@ -5,6 +5,7 @@ import Navbar from "./navbar/Navbar.js";
 import AppWrapper from "./AppWrapper.js";
 import Home from "./pages/Home.js";
 import Portfolio from "./pages/Portfolio.js";
+import Contact from "./pages/Contact.js";
 function App() {
   return (
     <Router>
@@ -12,6 +13,9 @@ function App() {
 	<AppWrapper>
 	  <Navbar />
 	  <Switch>
+	    <Route path="/contact">
+	      <Contact />
+	    </Route>
 	    <Route path="/examples">
 	      <Portfolio />
 	    </Route>
