@@ -52,6 +52,11 @@ body {
     height: 100%;
   }
  }
+
+li, a {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+}
 `;
 
 export default function AppWrapper(props) {
