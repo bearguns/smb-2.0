@@ -10,7 +10,7 @@ import PortfolioLinks from "./PortfolioLinks.js";
 export default function SeanBrage() {
   const bullets = ["react", "styled-components", "css grid", "now.sh"];
   return (
-    <Block columns={"right"} rows={6} appear={"right"} delay={".5s"}>
+    <Block columns={"right"} rows={5} appear={"right"} delay={"1s"}>
       <Screenshot image={"sbdc_grab.png"} />
       <Heading level={2}>seanbrage.com</Heading>
       <Heading level={3}>personal site / portfolio</Heading>

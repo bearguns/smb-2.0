@@ -27,7 +27,7 @@ const Link = styled.a`
 
 export default function Intro() {
   return (
-    <Block columns={"left"} rows={2} appear={"left"} delay={".25s"}>
+    <Block columns={"left"} rows={3} appear={"left"} delay={".25s"}>
       <Heading level={1}>
 	<FontAwesomeIcon icon={["fal", "laptop-code"]} />
       </Heading>
