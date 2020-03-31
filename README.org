@@ -1,0 +1,41 @@
+#+TITLE: SEANBRAGEDOTCOM 2.0
+#+AUTHOR: Sean Brage
+
+My personal website and portfolio, built with React and hosted using Zeit's [[https://now.sh][Now.sh]].
+
+* Overview
+I decided to take my personal site from a simple static one-pager to a
+full-featured SPA using the latest React features and patterns. I
+wanted to challenge myself to improve my design skills while I got
+caught up on what's been happening in React over the last 1.5 years.
+
+** Under the hood
+The app was scaffolded with ~create-react-app~, as they've added enough
+sensible defaults by now to make it a lot easier to get up and running
+without the need to ~eject~.
+
+*** Front end stack
+- React
+  - Hooks & Context API for sharing state across components
+  - No Redux (hooray!)
+- Styled Components
+  - Isolated component-specific styles
+  - Reusable, composable layout and common components
+  - Global light/dark themes
+- React Router DOM
+  - Still the most straightforward, sensible solution for client-side
+    routing in React, IMO
+  - Easy to implement global components i.e. ~<ScrollToTop />~ without
+    hacking a JS object of paths and component resolvers.
+- CSS Transitions + Animations
+  - No 3rd-party animation library
+  - Easy to customize per-component using ~props~ and ~styled-components~
+
+*** Hosting
+I am hosting the site using Now, the wonderful hosting solution from
+the same people behind [[https://nextjs.org/][Next.js]] and the [[https://hyper.is/][Hyper terminal emulator.]]
+
+With Now, it's easy to setup GitHub integration for CI/CD, as well as
+store application secrets. The Now CLI is fantastic for deploying to
+staging or production without leaving the local repository, and the
+documentation is actually /good/, which is rare for these kinds of projects.
